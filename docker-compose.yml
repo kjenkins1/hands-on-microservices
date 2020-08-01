@@ -1,0 +1,40 @@
+version: '2.4'
+
+services:
+  product:
+    container_name: product
+    build:
+      context: .
+      dockerfile: ./product-service/Dockerfile
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  recommendation:
+    container_name: recommendation
+    build:
+      context: .
+      dockerfile: ./recommendation-service/Dockerfile
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  review:
+    container_name: review
+    build:
+      context: .
+      dockerfile: ./review-service/Dockerfile
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  product-composite:
+    container_name: product-composite
+    build:
+      context: .
+      dockerfile: ./product-composite-service/Dockerfile
+    mem_limit: 350m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
