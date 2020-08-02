@@ -7,7 +7,7 @@ group = 'dev.michaeldubose'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '14'
 
-ext['springBootVersion'] = '2.3.0.RELEASE'
+ext['springBootVersion'] = '2.3.2.RELEASE'
 
 repositories {
     mavenCentral()

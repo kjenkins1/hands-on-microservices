@@ -7,7 +7,7 @@ group = 'dev.michaeldubose'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '14'
 
-ext['springBootVersion'] = '2.3.0.RELEASE'
+ext['springBootVersion'] = '2.3.2.RELEASE'
 
 repositories {
     mavenCentral()
@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    compile group: 'org.springdoc', name: 'springdoc-openapi-webflux-ui', version: '1.4.3'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
