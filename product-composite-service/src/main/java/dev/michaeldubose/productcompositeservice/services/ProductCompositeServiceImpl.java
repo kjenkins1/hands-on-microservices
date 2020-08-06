@@ -52,7 +52,8 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
 
     String productAddress = product.getServiceAddress();
     String reviewAddress = reviews.stream().findFirst().map(Review::getServiceAddress).orElse("");
-    String recommendationAddress = recommendations.stream().findFirst().map(Recommendation::getServiceAddress).orElse("");
+    String recommendationAddress = recommendations.stream().findFirst().map(Recommendation::getServiceAddress)
+      .orElse("");
     ServiceAddresses serviceAddresses = new ServiceAddresses(serviceAddress, productAddress, reviewAddress, recommendationAddress);
 
     return new ProductAggregate(productId, name, weight, recommendationSummaries, reviewSummaries, serviceAddresses);

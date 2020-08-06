@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.0.RELEASE'
+    id 'org.springframework.boot' version '2.3.2.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
@@ -16,6 +16,7 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-webflux-ui', version: '1.4.3'
     implementation project(':api')
     implementation project(':util')
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
